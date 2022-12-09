@@ -8,13 +8,15 @@ import { abbreviateNumber } from "js-abbreviation-number";
 import { fetchDataFromApi } from "../utils/api";
 import { Context } from "../context/contextApi";
 import SuggestionVideoCard from "./SuggestionVideoCard";
+import VideoDetailsSkeleton from "./VideoDetailsSkeleton";
 
 const VideoDetails = () => {
   const [video, setVideo] = useState();
   const [relatedVideos, setRelatedVideos] = useState();
+  const [skeletons, setSkeletons] = useState([1, 2, 3, 4, 5]);
   const { id } = useParams();
 
-  const { setLoading } = useContext(Context);
+  const { setLoading, loading } = useContext(Context);
 
   useEffect(() => {
     document.getElementById("root").classList.add("custom-h");
@@ -98,10 +100,20 @@ const VideoDetails = () => {
         </div>
         {/*This is the column of recommended videos*/}
         <div className="flex flex-col py-6 px-4 overflow-y-auto lg:w-[350px] xl:w-[400px]">
-          {relatedVideos?.contents?.map((item, index) => {
-              if(item.type !== "video") return false;
-            return <SuggestionVideoCard key={index} video={item?.video} />;
-          })}
+          {!loading ? (
+            relatedVideos?.contents?.map((item, index) => {
+              if (item.type !== "video") return false;
+              return <SuggestionVideoCard key={index} video={item?.video} />;
+            })
+          ) : (
+            <>
+              <VideoDetailsSkeleton />
+              <VideoDetailsSkeleton />
+              <VideoDetailsSkeleton />
+              <VideoDetailsSkeleton />
+              <VideoDetailsSkeleton />
+            </>
+          )}
         </div>
       </div>
     </div>

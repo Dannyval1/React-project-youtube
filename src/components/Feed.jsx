@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from "react";
 import { Context } from "../context/contextApi";
 import LeftNav from "./LeftNav";
 import VideoCard from "./VideoCard";
+import FeedSkeleton from "./FeedSkeleton";
+import Box from "@mui/material/Box";
 
 const Feed = () => {
   const { loading, searchResult } = useContext(Context);
@@ -15,14 +17,32 @@ const Feed = () => {
       <LeftNav />
       <div className="grow w-[calc(100%-240px)] h-full overflow-y-auto bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-5">
-          {!loading &&
-            searchResult &&
+          {!loading && searchResult ? (
             searchResult?.map((item) => {
               if (item?.type !== "video") return false;
               return (
                 <VideoCard key={item?.VideoCard?.videoId} video={item?.video} />
               );
-            })}
+            })
+          ) : (
+            <Box>
+              <Box sx={{ display: "flex" }}>
+                <FeedSkeleton />
+                <FeedSkeleton />
+                <FeedSkeleton />
+              </Box>
+              <Box sx={{ display: "flex" }}>
+                <FeedSkeleton />
+                <FeedSkeleton />
+                <FeedSkeleton />
+              </Box>
+              <Box sx={{ display: "flex" }}>
+                <FeedSkeleton />
+                <FeedSkeleton />
+                <FeedSkeleton />
+              </Box>
+            </Box>
+          )}
         </div>
       </div>
     </div>
