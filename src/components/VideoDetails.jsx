@@ -13,7 +13,6 @@ import VideoDetailsSkeleton from "./VideoDetailsSkeleton";
 const VideoDetails = () => {
   const [video, setVideo] = useState();
   const [relatedVideos, setRelatedVideos] = useState();
-  const [skeletons, setSkeletons] = useState([1, 2, 3, 4, 5]);
   const { id } = useParams();
 
   const { setLoading, loading } = useContext(Context);

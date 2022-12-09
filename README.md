@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# YouTube Clone - Danny Valencia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a YouTube clone. It was developed with React, Javascript, Tailwindcss, MaterialUI, ContextAPI and much more.
 
 ## Available Scripts
 
@@ -38,6 +38,11 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Project Screen Shot(s)
+<img src="/src/images/screen1.png" width="300">
+<img src="/src/images/screen2.png" width="300">
+<img src="/src/images/screen3.png" width="300">
 
 ## Learn More
 
