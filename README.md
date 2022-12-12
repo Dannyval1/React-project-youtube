@@ -44,31 +44,17 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 <img src="/src/images/screen2.png" width="300">
 <img src="/src/images/screen3.png" width="300">
 
-## Learn More
+## Reflection
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project was developed in React and It will be a project inside my Personal Portfolio. I used some hooks as useEffect, useState, useContext.
+I used useParams for getting search queries.
+I used React-router-dom for navigation.
+I used Material UI for the skeletons while is charging the data.
+All the Styles was made with TailwindCss.
+The YouTube API was from this page: https://rapidapi.com/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Live Demo
+You can find a Demo here: https://youtube-danny.netlify.app
 
 ### `npm run build` fails to minify
 
